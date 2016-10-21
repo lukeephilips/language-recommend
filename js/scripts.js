@@ -1,65 +1,35 @@
-http://www.bestprogramminglanguagefor.me/q
-
-name - string
-date - date
-platformType - [mobile, web, desktop]
-operatingSystem - [windows, mac, dont care]
-mathFocus - [0-4]
-workEnv- [corporate, other]
-flexibilty - [low, high]
-gut [css, php, ruby, c#, java]
-
-platformType
-mobile
-web
-desktop
-
-operatingSystem
-windows
-mac
-i dont care
-
-workEnv
-  crawl in  = other
-  work from the beach = freelance
-  ping-pong = other
-  shoes off, feet up = other
-  predictable with lots of structure = corp
-  do my job and go home = corp
-
-gut
-what scares you most?
-  color schemess and off center divs - css
-  having to show up to the same place everday -php
-  working on the same project for 3 months -ruby
-  inoptimized recursive formulas -java
-  what if my company goes out of business -c#
-
-math
-math 0 to 4 slider
-
-
-flexibility
-Skill flexibility?
-I know what I like, and I want to become an expert at inspect
-I want to try it all!
-
+// name - string
+// date - date
+// platformType - [mobile, web, desktop]
+// operatingSystem - [windows, mac, dont care]
+// mathFocus - [0-4]
+// workEnv- [corporate, other]
+// flexibility- [low, high]
+// gut [css, php, ruby, c#, java]
 
 
 //global variables assigned
 var platformType = "";
 var operatingSystem = "";
-var mathFocus = 1;
-var workEnv = "corporate";
-var flexibility = "low"
-var peeve = ""
+var mathFocus = 0;
+var workEnv = "";
+var flexibility = ""
+var gut = ""
 var name = ""
-//variables set based on form
-
+//test variables
+// var platformType = "mobile";
+// var operatingSystem = "";
+// var mathFocus = 1;
+// var workEnv = "corporate";
+// var flexibility = "low";
+// var gut = "java";
+// var name = "Test Name";
 
 //comparison algorithm
-var recommendation = function(mathFocus, workEnv, flexibility) {
-  console.log("recommendation run");
+
+var recommendation = function(platformType, operatingSystem, mathFocus, workEnv, flexibility) {
+  console.log("recommendation called");
+
   if(platformType === "mobile") {
     console.log("platformType- mobile" + platformType);
     return "java";
@@ -112,4 +82,29 @@ var recommendation = function(mathFocus, workEnv, flexibility) {
     }
   }
 };
-recommendation(mathFocus, workEnv, flexibility));
+
+// recommendation(mathFocus, workEnv, flexibility);
+
+
+//variables set based on form
+//######## reset to actual content
+$(document).ready(function() {
+  console.log("page loaded");
+  $("#inputForm form").submit(function(event) {
+    console.log("submit run");
+    platformType = "web";
+    operatingSystem = "";
+    mathFocus = 1;
+    workEnv = "corporate";
+    flexibility = "low";
+    gut = "java";
+    name = "Test Name";
+
+    console.log("test variables set");
+    console.log(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
+
+    $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
+
+    event.preventDefault();
+  });
+});
