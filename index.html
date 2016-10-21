@@ -8,33 +8,55 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
 
-
-    <title>Which language should you learn</title>
+  </script>
+      <title>Which language should you learn</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
       </div> <!-- header -->
 
-      <div id="inputForm"><!--input page -->
+      <div id="inputForm" class="well"><!--input page -->
         <form>
-          <div class="form-group" id="name">
-              <p>
-                Name content
-              </p>
+          <div id="namePanel">
+            <div class="form-group">
+              <label for="name">Name: </label>
+              <input type="text" class="form-control" id="name" placeholder="Jane">
+            </div>
           </div>
           <div class="form-group" id="date">
                 date content
           </div>
-          <div class="form-group" id="platformType">
-                platform content
+
+          <div class="form-group" id="platformTypePanel">
+            <fieldset>
+              <label for="platformType">Web</label>
+              <input type="radio" name="platformType" value="web">
+              <label for="platformType-2">Mobile</label>
+              <input type="radio" name="platformType" value="mobile" checked>
+              <label for="platformType">Desktop applications</label>
+              <input type="radio" name="platformType" value="desktop">
+            </fieldset>
           </div>
-          <div class="form-group" id="operatingSystem">
+
+          <div class="form-group" id="operatingSystemPanel">
+            <label for="operatingSystem">Which Operating System would you like to work on?
+            </label>
+            <select class="form-control" id="operatingSystem">
+              <option value="windows">Windows</option>
+              <option value="mac">Mac</option>
+              <option value="other">I don't care</option>
+
+            </select>
+
                 OS content
           </div>
           <div class="form-group" id="mathFocus">
                 math content
+                <!-- <div class="slider"></div>
+                <button type="button" class="btn" name="testbutton" id="testbutton">Hit me!</button> -->
           </div>
           <div class="form-group" id="workEnv">
                 workEnv content

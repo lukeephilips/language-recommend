@@ -85,15 +85,21 @@ var recommendation = function(platformType, operatingSystem, mathFocus, workEnv,
 
 // recommendation(mathFocus, workEnv, flexibility);
 
-
+var slideVal = 0;
 //variables set based on form
 //######## reset to actual content
 $(document).ready(function() {
-  console.log("page loaded");
+
+
+  // ### SLIDER Slider $('.slider').slider()
+
   $("#inputForm form").submit(function(event) {
-    console.log("submit run");
-    platformType = "web";
-    operatingSystem = "";
+      console.log("submit run");
+    platformType = $("input:radio[name=platformType]:checked").val();
+      console.log(platformType);
+    operatingSystem = $("#operatingSystem").val();
+      console.log("OS " + operatingSystem);
+
     mathFocus = 1;
     workEnv = "corporate";
     flexibility = "low";
@@ -107,4 +113,11 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+// ##### SLIDER
+  // $("#testbutton").click(function(){
+  //   slideVal = $(".slider".('getValue');
+  //   console.log("button" + slideVal);
+  //
+  // });
 });
