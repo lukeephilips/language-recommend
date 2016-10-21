@@ -18,30 +18,26 @@
       <div class="header">
       </div> <!-- header -->
 
-      <div id="inputForm" class="well"><!--input page -->
+      <div id="inputForm"><!--input page -->
         <form>
-          <div id="namePanel">
+          <div class="form-group well" id="namePanel">
             <div class="form-group">
               <label for="name">Name: </label>
               <input type="text" class="form-control" id="name" placeholder="Jane">
             </div>
           </div>
-          <div class="form-group" id="date">
-                date content
-          </div>
-
-          <div class="form-group" id="platformTypePanel">
+          <div class="form-group well" id="platformTypePanel">
             <fieldset>
               <label for="platformType">Web</label>
-              <input type="radio" name="platformType" value="web">
+              <input type="radio" name="platformType" value="web" checked>
               <label for="platformType-2">Mobile</label>
-              <input type="radio" name="platformType" value="mobile" checked>
+              <input type="radio" name="platformType" value="mobile" >
               <label for="platformType">Desktop applications</label>
               <input type="radio" name="platformType" value="desktop">
             </fieldset>
           </div>
 
-          <div class="form-group" id="operatingSystemPanel">
+          <div class="form-group well" id="operatingSystemPanel">
             <label for="operatingSystem">Which Operating System would you like to work on?
             </label>
             <select class="form-control" id="operatingSystem">
@@ -50,46 +46,73 @@
               <option value="other">I don't care</option>
             </select>
           </div>
-
-          <div class="form-group" id="mathFocus">
-                math content
+          <div class="form-group well" id="mathFocusPanel">
+            <label for="mathFocus">How do you feel about math?
+            </label>
+            <select class="form-control" id="mathFocus">
+              <option value="low">God no</option>
+              <option value="low">I do it when I have to</option>
+              <option value="medium" >It's ok</option>
+              <option value="high" >Math is sweet</option>
+              <option value="high" >Isn't that all coding is?</option>
+            </select>
+            </div>
                 <!-- <div class="slider"></div>
                 <button type="button" class="btn" name="testbutton" id="testbutton">Hit me!</button> -->
-          </div>
-          <div class="form-group" >
-                 <label for="workEnv">Crawl in when I'm good and ready, eat some cheetos and then work till my eyes bleed</label>
-                 <input type="radio" name="workEnv" value="startup">
+          <div class="form-group well" id="workEnvPanel">
+            <label for="workEnv">Which sounds like your ideal work environment?</label>
+             <label for="workEnv">Crawl in when I'm good and ready, eat some cheetos and then work till my eyes bleed</label>
+             <input type="radio" name="workEnv" value="startup" checked="">
 
-                <label for="workEnv">WFH = Work from the beach</label>
-                <input type="radio" name="workEnv" value="freelance">
+             <label for="workEnv">WFH = Work from the beach</label>
+             <input type="radio" name="workEnv" value="freelance">
 
-                <label for="workEnv">I want to hear the sweet music of Ping-pong all day, errday</label>
-                <input type="radio" name="workEnv" value="startup">
+             <label for="workEnv">I want to hear the sweet music of Ping-pong all day, errday</label>
+             <input type="radio" name="workEnv" value="startup">
 
-                <label for="workEnv">Shoes off, feet up, three monitors</label>
-                <input type="radio" name="workEnv" value="startup">
+             <label for="workEnv">Shoes off, feet up, three monitors</label>
+             <input type="radio" name="workEnv" value="startup">
 
-                <label for="workEnv">Predictable with lots of structure and a 10 year plan</label>
-                <input type="radio" name="workEnv" value="corporate">
+             <label for="workEnv">Predictable with lots of structure and a 10 year plan</label>
+             <input type="radio" name="workEnv" value="corporate">
 
-                <label for="workEnv">Do my job and be out the door by 5:01</label>
-                <input type="radio" name="workEnv" value="corporate">
-                  </div>
-                </div>
+             <label for="workEnv">Do my job and be out the door by 5:01</label>
+             <input type="radio" name="workEnv" value="corporate">
           </div>
 
-          <div class="form-group" id="flexibility">
-                flexibility content
+          <div class="form-group well" id="flexibilityPanel">
+            <label for="flexibility">Which sounds more like you?</label>
+            <select class="form-control" id="flexibility">
+              <option value="low"> I know what I like, and I want to be an expert at it</option>
+              <option value="high"> I'd like to be able to plug in and work on anything</option>
+            </select>
           </div>
-          <div class="form-group" id="gut">
-                gut content
+
+          <div class="form-group well" id="gutPanel">
+          <label for="gut">What scares you?</label>
+
+           <label for="gut">Color schemes and off center divs</label>
+           <input type="radio" name="gut" value="css" checked>
+
+           <label for="gut">The prospect of showing up to the same place everyday for a year</label>
+           <input type="radio" name="gut" value="php">
+
+           <label for="gut">Working on the type of project for 3 months</label>
+           <input type="radio" name="gut" value="ruby">
+
+           <label for="gut">Finding a new job</label>
+           <input type="radio" name="gut" value="c#">
+
+           <label for="gut">Missed opportunities for recursion</label>
+           <input type="radio" name="gut" value="java">
           </div>
+
           <button type="submit" class="btn" name="inputForm">Hit me!</button>
         </form>
       </div><!-- inputForm -->
 
       <div class="output">
-        <p>you should learn <span id="recommendation"></span> or <span id="recommendation2"></span></p>
+        <p>you should learn <span id="recommendation"></span> <span id="recommendation2"></span></p>
       </div>
 
     </div> <!-- End container -->

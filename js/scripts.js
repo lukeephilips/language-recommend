@@ -1,9 +1,9 @@
 // name - string
 // date - date
 // platformType - [mobile, web, desktop]
-// operatingSystem - [windows, mac, dont care]
-// mathFocus - [0-4]
-// workEnv- [corporate, other]
+// operatingSystem - [windows, mac, other]
+// mathFocus - [low, medium, high]
+// workEnv- [corporate, startup, freelance]
 // flexibility- [low, high]
 // gut [css, php, ruby, c#, java]
 
@@ -11,19 +11,15 @@
 //global variables assigned
 var platformType = "";
 var operatingSystem = "";
-var mathFocus = 0;
+var mathFocus = "";
 var workEnv = "";
-var flexibility = ""
-var gut = ""
-var name = ""
-//test variables
-// var platformType = "mobile";
-// var operatingSystem = "";
-// var mathFocus = 1;
-// var workEnv = "corporate";
-// var flexibility = "low";
-// var gut = "java";
-// var name = "Test Name";
+var flexibility = "";
+var gut = "";
+var name = "";
+var recommendation = "";
+// var slideVal = 0;
+
+// var recommendation2 = ""
 
 //comparison algorithm
 
@@ -46,7 +42,7 @@ var recommendation = function(platformType, operatingSystem, mathFocus, workEnv,
   }
   else if (platformType === "web") {
 
-    if (mathFocus <= 1) {                        // math - css, php
+    if (mathFocus === "low") {                        // math - css, php
       console.log("math low- " + mathFocus)
       if (flexibility === "low") {                  // skill flexibility - css
         console.log("math low- " + mathFocus + "flexibility low- " + flexibility)
@@ -83,11 +79,15 @@ var recommendation = function(platformType, operatingSystem, mathFocus, workEnv,
   }
 };
 
-// recommendation(mathFocus, workEnv, flexibility);
+// var recommendation2 = function(gut) {
+//   console.log("rec 2 called");
+//   recommendation2 = $("input:radio[name=gut]:checked").val();
+//   console.log("rec 2 val" + recommendation2);
+//   return recommendation2
+// };
 
-var slideVal = 0;
+
 //variables set based on form
-//######## reset to actual content
 $(document).ready(function() {
 
 
@@ -99,18 +99,27 @@ $(document).ready(function() {
       console.log(platformType);
     operatingSystem = $("#operatingSystem").val();
       console.log("OS " + operatingSystem);
+    mathFocus = $("#mathFocus").val();
+        console.log("****MATH " + mathFocus);
     workEnv = $("input:radio[name=workEnv]:checked").val();
-      console.log("**** workEnv " + workEnv);
-
-    mathFocus = 1;
-    flexibility = "low";
-    gut = "java";
-    name = "Test Name";
+      console.log("workEnv " + workEnv);
+    flexibility = $("#flexibility").val();
+      console.log("flex " + flexibility);
+    gut = $("input:radio[name=gut]:checked").val();
+      console.log(" ***** gut is" + gut);
 
     console.log("test variables set");
     console.log(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
 
     $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
+
+    // recommendation2(gut);
+    // console.log(recommendation + " " + recommendation2);
+    //   if (recommendation != recommendation2) {
+    //     console.log("UNEQUAL");
+      // }
+    // $("#recommendation2").text(recommendation2(gut)); //text recommendation to output div
+
 
     event.preventDefault();
   });
