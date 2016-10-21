@@ -99,9 +99,10 @@ $(document).ready(function() {
       console.log(platformType);
     operatingSystem = $("#operatingSystem").val();
       console.log("OS " + operatingSystem);
+    workEnv = $("input:radio[name=workEnv]:checked").val();
+      console.log("**** workEnv " + workEnv);
 
     mathFocus = 1;
-    workEnv = "corporate";
     flexibility = "low";
     gut = "java";
     name = "Test Name";
