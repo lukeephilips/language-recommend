@@ -7,7 +7,7 @@
 #platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output {
   display: none;
 }
-.well {
+.panel-body {
 height: 300px;
 position:relative;
 

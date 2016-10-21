@@ -20,53 +20,79 @@
 
       <div id="inputForm"><!--input page -->
         <form>
-          <div class="form-group well" id="namePanel">
-            <div class="form-group">
+          <div class="form-group panel panel-default" id="namePanel">
+            <div class="panel-heading">
+              <span>What's your name?</span>
+            </div>
+            <div class="form-group panel-body">
               <label for="name">Name: </label>
               <input type="text" class="form-control" id="name" placeholder="Jane">
             </div>
-            <button type="button" class="btn middle-bottom-container" name="nextName" id="nextName">Next</button>
+            <div class="panel-footer">
+            <button type="button" class="btn middle-bottom-container" name="nextName" id="nextName">Next</button></div>
           </div>
 
-          <div class="form-group well" id="platformTypePanel">
-            <fieldset>
-              <label for="platformType">Web</label>
-              <input type="radio" name="platformType" value="web" checked>
-              <label for="platformType-2">Mobile</label>
-              <input type="radio" name="platformType" value="mobile" >
-              <label for="platformType">Desktop applications</label>
-              <input type="radio" name="platformType" value="desktop">
-            </fieldset>
-            <button type="button" class="btn" name="nextPlatform" id="nextPlatform">Next</button>
-          </div>
-
-          <div class="form-group well" id="operatingSystemPanel">
-            <label for="operatingSystem">Which Operating System would you like to work on?
-            </label>
-            <select class="form-control" id="operatingSystem">
-              <option value="windows">Windows</option>
-              <option value="mac">Mac</option>
-              <option value="other">I don't care</option>
-            </select>
-            <button type="button" class="btn" name="nextOS" id="nextOS">Next</button>
-          </div>
-
-          <div class="form-group well" id="mathFocusPanel">
-            <label for="mathFocus">How do you feel about math?
-            </label>
-            <select class="form-control" id="mathFocus">
-              <option value="low">God no</option>
-              <option value="low">I do it when I have to</option>
-              <option value="medium" >It's ok</option>
-              <option value="high" >Math is sweet</option>
-              <option value="high" >Isn't that all coding is?</option>
-            </select>
-            <button type="button" class="btn" name="nextMath" id="nextMath">Next</button>
+          <div class="form-group panel panel-default" id="platformTypePanel">
+            <div class="panel-heading">
+              <span>Which type of developer do you want to be?</span>
             </div>
+            <div class="panel-body">
+              <fieldset>
+                <label for="platformType">Web</label>
+                <input type="radio" name="platformType" value="web" checked>
+                <label for="platformType-2">Mobile</label>
+                <input type="radio" name="platformType" value="mobile" >
+                <label for="platformType">Desktop applications</label>
+                <input type="radio" name="platformType" value="desktop">
+              </fieldset>
+            </div>
+            <div class="panel-footer">
+              <button type="button" class="btn" name="nextPlatform" id="nextPlatform">Next</button>
+            </div>
+          </div>
+
+          <div class="form-group panel panel-default" id="operatingSystemPanel">
+            <div class="panel-heading">
+              <span for="operatingSystem">Which Operating System would you like to work on?
+              </span>
+            </div>
+            <div class="panel-body">
+              <select class="form-control" id="operatingSystem">
+                <option value="windows">Windows</option>
+                <option value="mac">Mac</option>
+                <option value="other">I don't care</option>
+              </select>
+            </div>
+            <div class="panel-footer">
+              <button type="button" class="btn" name="nextOS" id="nextOS">Next</button>
+            </div>
+          </div>
+
+          <div class="form-group panel panel-default" id="mathFocusPanel">
+            <div class="panel-heading">
+              <span for="mathFocus">How do you feel about math?
+              </span>
+            </div>
+            <div class="panel-body">
+              <select class="form-control" id="mathFocus">
+                <option value="low">God no</option>
+                <option value="low">I do it when I have to</option>
+                <option value="medium" >It's ok</option>
+                <option value="high" >Math is sweet</option>
+                <option value="high" >Isn't that all coding is?</option>
+              </select>
+            </div>
+            <div class="panel-footer">
+              <button type="button" class="btn" name="nextMath" id="nextMath">Next</button>
+            </div>
+          </div>
                 <!-- <div class="slider"></div>
                 <button type="button" class="btn" name="testbutton" id="testbutton">Hit me!</button> -->
-          <div class="form-group well" id="workEnvPanel">
-            <label for="workEnv">Which sounds like your ideal work environment?</label>
+          <div class="form-group panel panel-default" id="workEnvPanel">
+            <div class="panel-heading">
+              <span for="workEnv">Which sounds like your ideal work environment?</span>
+            </div>
+            <div class="panel-body">
              <label for="workEnv">Crawl in when I'm good and ready, eat some cheetos and then work till my eyes bleed</label>
              <input type="radio" name="workEnv" value="startup" checked="">
 
@@ -84,43 +110,57 @@
 
              <label for="workEnv">Do my job and be out the door by 5:01</label>
              <input type="radio" name="workEnv" value="corporate">
+           </div>
+           <div class="panel-footer">
              <button type="button" class="btn" name="nextWork" id="nextWork">Next</button>
+           </div>
           </div>
 
-          <div class="form-group well" id="flexibilityPanel">
-            <label for="flexibility">Which sounds more like you?</label>
-            <select class="form-control" id="flexibility">
-              <option value="low"> I know what I like, and I want to be an expert at it</option>
-              <option value="high"> I'd like to be able to plug in and work on anything</option>
-            </select>
-            <button type="button" class="btn" name="nextFlex" id="nextFlex">Next</button>
+          <div class="form-group panel panel-default" id="flexibilityPanel">
+            <div class="panel-header">
+              <span for="flexibility">Which sounds more like you?</span>
+            </div>
+            <div class="panel-body">
+              <select class="form-control" id="flexibility">
+                <option value="low"> I know what I like, and I want to be an expert at it</option>
+                <option value="high"> I'd like to be able to plug in and work on anything</option>
+              </select>
+            </div>
+            <div class="panel-footer">
+              <button type="button" class="btn" name="nextFlex" id="nextFlex">Next</button>
+            </div>
           </div>
 
-          <div class="form-group well" id="gutPanel">
-          <label for="gut">What scares you?</label>
+          <div class="form-group panel panel-default" id="gutPanel">
+            <div class="panel-heading">
+              <label for="gut">What scares you?</label>
+            </div>
+            <div class="panel-body">
+             <label for="gut">Color schemes and off center divs</label>
+             <input type="radio" name="gut" value="css" checked>
 
-           <label for="gut">Color schemes and off center divs</label>
-           <input type="radio" name="gut" value="css" checked>
+             <label for="gut">The prospect of showing up to the same place everyday for a year</label>
+             <input type="radio" name="gut" value="php">
 
-           <label for="gut">The prospect of showing up to the same place everyday for a year</label>
-           <input type="radio" name="gut" value="php">
+             <label for="gut">Working on the type of project for 3 months</label>
+             <input type="radio" name="gut" value="ruby">
 
-           <label for="gut">Working on the type of project for 3 months</label>
-           <input type="radio" name="gut" value="ruby">
+             <label for="gut">Finding a new job</label>
+             <input type="radio" name="gut" value="c#">
 
-           <label for="gut">Finding a new job</label>
-           <input type="radio" name="gut" value="c#">
-
-           <label for="gut">Missed opportunities for recursion</label>
-           <input type="radio" name="gut" value="java">
-           <button type="submit" class="btn" name="inputForm">Hit me!</button>
+             <label for="gut">Missed opportunities for recursion</label>
+             <input type="radio" name="gut" value="java">
+           </div>
+           <div class="panel-footer">
+             <button type="submit" class="btn" name="inputForm">Hit me!</button>
+           </div>
           </div>
 
 
         </form>
       </div><!-- inputForm -->
 
-      <div class="well "id="output">
+      <div class="panel panel-default "id="output">
         <p><span id="nameOutput"></span> you should learn <span id="recommendation"></span> <span id="recommendation2"></span></p>
       </div>
 

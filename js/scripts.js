@@ -95,33 +95,33 @@ $(document).ready(function() {
 
   //advance through questions
   $("#nextName").click(function() {
-    $(this.parentNode).hide();
+    $("#namePanel").hide();
     $("#platformTypePanel").show();
   });
   $("#nextPlatform").click(function() {
-    $(this.parentNode).hide();
+    $("#platformTypePanel").hide();
     $("#operatingSystemPanel").show();
   });
   $("#nextOS").click(function() {
-    $(this.parentNode).hide();
+    $("#operatingSystemPanel").hide();
     $("#mathFocusPanel").show();
   });
   $("#nextMath").click(function() {
-    $(this.parentNode).hide();
+    $("#mathFocusPanel").hide();
     $("#workEnvPanel").show();
   });
   $("#nextWork").click(function() {
-    $(this.parentNode).hide();
+    $("#workEnvPanel").hide();
     $("#flexibilityPanel").show();
   });
   $("#nextFlex").click(function() {
-    $(this.parentNode).hide();
+    $("#flexibilityPanel").hide();
     $("#gutPanel").show();
   });
 
 
   $("#inputForm form").submit(function(event) {
-      $(this.parentNode).hide();
+      $("#gutPanel").hide();
       $("#output").show();
 
       console.log("submit run");
