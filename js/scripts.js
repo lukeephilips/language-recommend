@@ -8,9 +8,9 @@ var gut = "";
 var name = "";
 var recommendation = "";
 var lanRec = "";
-// var recommendation2 = ""
+var recommendation2 = ""
 
-//comparison algorithm
+//comparison algorithm recommendation()
 var recommendation = function(platformType, operatingSystem, mathFocus, workEnv, flexibility) {
   console.log("recommendation called");
 
@@ -67,12 +67,13 @@ var recommendation = function(platformType, operatingSystem, mathFocus, workEnv,
   }
 };
 
-// var recommendation2 = function(gut) {
-//   console.log("rec 2 called");
-//   recommendation2 = $("input:radio[name=gut]:checked").val();
-//   console.log("rec 2 val" + recommendation2);
-//   return recommendation2
-// };
+// second comparison based on get variable recommendation2()
+var recommendation2 = function(gut) {
+  console.log("rec 2 called");
+  recommendation2 = $("input:radio[name=gut]:checked").val();
+  console.log("rec 2 val" + recommendation2);
+  return recommendation2
+};
 
 
 //variables set based on form
@@ -137,9 +138,17 @@ $(document).ready(function() {
     $("#nameOutput").text(name);
     $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
 
-    // var recommendation = $(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
     var langRec = recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility);
     console.log("Test" + langRec);
+
+    var rec2 = recommendation2(gut);
+    console.log(langRec + " " + rec2);
+      if (rec2 != langRec) {
+        console.log("UNEQUAL");
+        $("#recommendation2").text("or maybe "+ rec2); //text recommendation to output div
+      }
+
+    //display logos
     if (langRec === "css") {
       $("#cssLogo").show();
     }
@@ -157,14 +166,6 @@ $(document).ready(function() {
       console.log("WHY NO C#");
     }
 
-
-
-    // recommendation2(gut);
-    // console.log(recommendation + " " + recommendation2);
-    //   if (recommendation != recommendation2) {
-    //     console.log("UNEQUAL");
-      // }
-    // $("#recommendation2").text(recommendation2(gut)); //text recommendation to output div
     $("#restart").click(function() {
       location.reload();
     });

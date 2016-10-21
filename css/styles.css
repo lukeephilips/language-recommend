@@ -1,26 +1,35 @@
-.form-group {
-  width:80%;
+body {
+  background-image: url(http://i.stack.imgur.com/IehB7.png);
+
+}
+.container {
+  width: 50%;
+}
+input {
+  width:50%;
 }
 .form-inline {
   width:30%;
 }
-#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, img {
-  display: none;
-}
 .panel-body {
 height: 300px;
 position:relative;
-
 }
+
+#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, img {
+  display: none;
+}
+/*#recommendation, #recommendation2 {
+  font-weight: bold;
+  font-size: 130%;
+}*/
+
 button {
   position:relative;
   float: bottom;
 
 }
-#recommendation, #recommendation2 {
-  font-weight: bold;
-  font-size: 130%;
-}
+
 img {
-  height: 160px;
+  height: 130px;
 }
