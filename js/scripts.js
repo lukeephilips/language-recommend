@@ -1,13 +1,3 @@
-// name - string
-// date - date
-// platformType - [mobile, web, desktop]
-// operatingSystem - [windows, mac, other]
-// mathFocus - [low, medium, high]
-// workEnv- [corporate, startup, freelance]
-// flexibility- [low, high]
-// gut [css, php, ruby, c#, java]
-
-
 //global variables assigned
 var platformType = "";
 var operatingSystem = "";
@@ -17,12 +7,10 @@ var flexibility = "";
 var gut = "";
 var name = "";
 var recommendation = "";
-// var slideVal = 0;
-
+var lanRec = "";
 // var recommendation2 = ""
 
 //comparison algorithm
-
 var recommendation = function(platformType, operatingSystem, mathFocus, workEnv, flexibility) {
   console.log("recommendation called");
 
@@ -90,13 +78,16 @@ var recommendation = function(platformType, operatingSystem, mathFocus, workEnv,
 //variables set based on form
 $(document).ready(function() {
 
-
-  // ### SLIDER Slider $('.slider').slider()
-
-  //advance through questions
+//advance through each panel question
   $("#nextName").click(function() {
-    $("#namePanel").hide();
-    $("#platformTypePanel").show();
+    if ($("#name").val() === "") {
+        $("#namePanel").addClass("has-error");
+        console.log("Put in a name");
+    }
+    else {
+      $("#namePanel").hide();
+      $("#platformTypePanel").show();
+    }
   });
   $("#nextPlatform").click(function() {
     $("#platformTypePanel").hide();
@@ -119,7 +110,7 @@ $(document).ready(function() {
     $("#gutPanel").show();
   });
 
-
+// on submit, set variables and  call recommendation()
   $("#inputForm form").submit(function(event) {
       $("#gutPanel").hide();
       $("#output").show();
@@ -146,21 +137,37 @@ $(document).ready(function() {
     $("#nameOutput").text(name);
     $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
 
+    // var recommendation = $(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
+    var langRec = recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility);
+    console.log("Test" + langRec);
+    if (langRec === "css") {
+      $("#cssLogo").show();
+    }
+    else if (langRec === "php") {
+      $("#phpLogo").show();
+    }
+    else if (langRec === "ruby") {
+      $("#rubyLogo").show();
+    }
+    else if (langRec === "java") {
+      $("#javaLogo").show();
+    }
+    else {
+      $("#cSharpLogo").show();
+      console.log("WHY NO C#");
+    }
+
+
+
     // recommendation2(gut);
     // console.log(recommendation + " " + recommendation2);
     //   if (recommendation != recommendation2) {
     //     console.log("UNEQUAL");
       // }
     // $("#recommendation2").text(recommendation2(gut)); //text recommendation to output div
-
-
+    $("#restart").click(function() {
+      location.reload();
+    });
     event.preventDefault();
   });
-
-// ##### SLIDER
-  // $("#testbutton").click(function(){
-  //   slideVal = $(".slider".('getValue');
-  //   console.log("button" + slideVal);
-  //
-  // });
 });

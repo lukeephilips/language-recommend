@@ -4,7 +4,7 @@
 .form-inline {
   width:30%;
 }
-#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output {
+#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, img {
   display: none;
 }
 .panel-body {
@@ -16,4 +16,11 @@ button {
   position:relative;
   float: bottom;
 
+}
+#recommendation, #recommendation2 {
+  font-weight: bold;
+  font-size: 130%;
+}
+img {
+  height: 160px;
 }
