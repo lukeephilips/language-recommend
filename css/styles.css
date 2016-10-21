@@ -5,25 +5,27 @@ body {
 .container {
   width: 50%;
 }
-input {
-  width:50%;
-}
+
 .form-inline {
   width:30%;
 }
 .panel-body {
 height: 300px;
 position:relative;
+font-size: 120%
 }
 
-#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, img {
+#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, .recommendation2text, img {
   display: none;
 }
-/*#recommendation, #recommendation2 {
+#nameOutput, #recommendation, #recommendation2 {
   font-weight: bold;
-  font-size: 130%;
-}*/
+  font-size: 140%;
+}
 
+#output {
+  text-align: center;
+}
 button {
   position:relative;
   float: bottom;
@@ -32,4 +34,15 @@ button {
 
 img {
   height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.panel-body label {
+  cursor: default;
+  font-size:
+}
+
+input {
+  width:50%;
 }

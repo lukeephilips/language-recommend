@@ -113,39 +113,27 @@ $(document).ready(function() {
 
 // on submit, set variables and  call recommendation()
   $("#inputForm form").submit(function(event) {
-      $("#gutPanel").hide();
-      $("#output").show();
 
-      console.log("submit run");
-    name = $("#name").val();
-      console.log("NAME****" + name);
+    $("#gutPanel").hide(); // show/hide final panel
+    $("#output").show();
+
+    name = $("#name").val(); // set variables based on answers
     platformType = $("input:radio[name=platformType]:checked").val();
-      console.log(platformType);
     operatingSystem = $("#operatingSystem").val();
-      console.log("OS " + operatingSystem);
     mathFocus = $("#mathFocus").val();
-        console.log("****MATH " + mathFocus);
     workEnv = $("input:radio[name=workEnv]:checked").val();
-      console.log("workEnv " + workEnv);
     flexibility = $("#flexibility").val();
-      console.log("flex " + flexibility);
     gut = $("input:radio[name=gut]:checked").val();
-      console.log(" ***** gut is" + gut);
 
-    console.log("test variables set");
-    console.log(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
-    console.log("NAME 2"+ name);
-    $("#nameOutput").text(name);
-    $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
+    $("#nameOutput").text(name); // print name on output
+    $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //call recommendation() to print output
 
-    var langRec = recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility);
-    console.log("Test" + langRec);
-
+    var langRec = recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility); // bring output of both recommendations into local scope to compare them and only display both if they're different (obviously this is janky)
     var rec2 = recommendation2(gut);
-    console.log(langRec + " " + rec2);
-      if (rec2 != langRec) {
-        console.log("UNEQUAL");
-        $("#recommendation2").text("or maybe "+ rec2); //text recommendation to output div
+
+      if (rec2 != langRec) { // compare two recommendations
+        $(".recommendation2text").show();
+        $("#recommendation2").text(rec2); //text recommendation to output div
       }
 
     //display logos

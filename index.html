@@ -6,12 +6,12 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Which language should you learn</title>
+    <title>Which language should you learn?</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <p>Answer a few questions to find which Epicodus track might be for you</p>
+        <p>Answer a few questions to find which language track might be best for you</p>
       </div>
       <div class="header">
       </div> <!-- header -->
@@ -23,7 +23,7 @@
               <span>What's your name?</span>
             </div>
             <div class="panel-body">
-              <input type="text" class="form-control" id="name" placeholder="Jane">
+              <input type="text" class="form-control" id="name" placeholder="Please enter your name">
             </div>
             <div class="panel-footer">
             <button type="button" class="btn btn-primary" name="nextName" id="nextName">Next</button></div>
@@ -34,20 +34,21 @@
               <span>Which type of developer do you want to be?</span>
             </div>
             <div class="panel-body">
-              <fieldset>
                 <div class="radio">
                   <label for="platformType">
-                    <input type="radio" name="platformType" value="web" checked>Web</label>
+                    <input type="radio" name="platformType" value="web" checked>Web
+                  </label>
                 </div>
                 <div class="radio">
                   <label for="platformType-2">
-                  <input type="radio" name="platformType" value="mobile" >Mobile</label>
+                    <input type="radio" name="platformType" value="mobile" >Mobile
+                  </label>
                 </div>
                 <div class="radio">
                   <label for="platformType">
-                  <input type="radio" name="platformType" value="desktop">Desktop applications</label>
+                    <input type="radio" name="platformType" value="desktop">Desktop applications
+                  </label>
                 </div>
-              </fieldset>
             </div>
             <div class="panel-footer">
               <button type="button" class="btn btn-primary" name="nextPlatform" id="nextPlatform">Next</button>
@@ -98,26 +99,26 @@
             <div class="panel-body">
               <div class="radio">
                <label for="workEnv">
-                 <input type="radio" name="workEnv" value="startup" checked="">Crawl in when I'm good and ready, eat some cheetos and then work till my eyes bleed
+                 <input type="radio" name="workEnv" value="startup" checked="">Crawl in when I'm ready, then work till my eyes bleed
                </label>
               </div>
               <div class="radio">
                <label for="workEnv">
-                 <input type="radio" name="workEnv" value="freelance">WFH = Work from the beach
+                 <input type="radio" name="workEnv" value="freelance">WFH = Work From Beach
                </label>
               </div>
               <div class="radio">
                <label for="workEnv">
-                 <input type="radio" name="workEnv" value="startup">I want to hear the sweet music of Ping-pong all day, errday
+                 <input type="radio" name="workEnv" value="startup">The sweet music of Ping-pong all day, errday
                </label>
-              </div>
-              <div class="radio">
-               <label for="workEnv">
-               <input type="radio" name="workEnv" value="startup">Shoes off, feet up, three monitors</label>
               </div>
               <div class="radio">
                <label for="workEnv">
                <input type="radio" name="workEnv" value="corporate">Predictable with lots of structure and a 10 year plan</label>
+              </div>
+              <div class="radio">
+               <label for="workEnv">
+               <input type="radio" name="workEnv" value="startup">Shoes off, feet up, three monitors</label>
               </div>
               <div class="radio">
                <label for="workEnv">
@@ -155,7 +156,7 @@
               </div>
               <div class="radio">
                  <label for="gut">
-                 <input type="radio" name="gut" value="php">The prospect of showing up to the same place everyday for a year</label>
+                 <input type="radio" name="gut" value="php">Showing up to the same place everyday for a year</label>
               </div>
               <div class="radio">
                <label for="gut">
@@ -184,13 +185,15 @@
           <span>Your recommendation</span>
         </div>
         <div class="panel-body">
-          <p><span id="nameOutput"></span>, you should consider checking out <span id="recommendation"></span> <span id="recommendation2"></span>
+          <p><span id="nameOutput"></span>, you should check out <span id="recommendation"></span> <span class="recommendation2text">but you leaned toward </span><span id="recommendation2"></span>
           </p>
-          <img src="img/css.png" alt=""  id="cssLogo"/>
-          <img src="img/php.png" class="img rounded" id="phpLogo" alt="" />
-          <img src="img/ruby.png" id="rubyLogo" alt="" />
-          <img src="img/java.png" id="javaLogo"alt="" />
-          <img src="img/cSharp.png" id="cSharpLogo" alt="" />
+          <div class="logo">
+            <img src="img/css.png" alt=""  id="cssLogo"/>
+            <img src="img/php.png" class="img rounded" id="phpLogo" alt="" />
+            <img src="img/ruby.png" id="rubyLogo" alt="" />
+            <img src="img/java.png" id="javaLogo"alt="" />
+            <img src="img/cSharp.png" id="cSharpLogo" alt="" />
+          </div>
         </div>
         <div class="panel-footer">
           <button type="button" class="btn btn-success" name="restart" id="restart">Start over</button>
