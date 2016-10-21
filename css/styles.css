@@ -4,15 +4,17 @@ body {
 }
 .container {
   width: 50%;
+  margin-top: 5%;
 }
 
-.form-inline {
-  width:30%;
+.jumbotron {
+  text-align: center;
 }
+
 .panel-body {
 height: 300px;
 position:relative;
-font-size: 120%
+font-size: 110%
 }
 
 #platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output, .recommendation2text, img {
@@ -23,12 +25,12 @@ font-size: 120%
   font-size: 140%;
 }
 
-#output {
+#output .panel-body {
   text-align: center;
 }
 button {
   position:relative;
-  float: bottom;
+  /*float: bottom-right;*/
 
 }
 
@@ -43,6 +45,6 @@ img {
   font-size:
 }
 
-input {
-  width:50%;
+.form-control  {
+  width:75%;
 }
