@@ -4,3 +4,16 @@
 .form-inline {
   width:30%;
 }
+#platformTypePanel, #operatingSystemPanel, #mathFocusPanel, #workEnvPanel, #flexibilityPanel, #gutPanel, #output {
+  display: none;
+}
+.well {
+height: 300px;
+position:relative;
+
+}
+button {
+  position:relative;
+  float: bottom;
+
+}

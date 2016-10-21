@@ -93,8 +93,40 @@ $(document).ready(function() {
 
   // ### SLIDER Slider $('.slider').slider()
 
+  //advance through questions
+  $("#nextName").click(function() {
+    $(this.parentNode).hide();
+    $("#platformTypePanel").show();
+  });
+  $("#nextPlatform").click(function() {
+    $(this.parentNode).hide();
+    $("#operatingSystemPanel").show();
+  });
+  $("#nextOS").click(function() {
+    $(this.parentNode).hide();
+    $("#mathFocusPanel").show();
+  });
+  $("#nextMath").click(function() {
+    $(this.parentNode).hide();
+    $("#workEnvPanel").show();
+  });
+  $("#nextWork").click(function() {
+    $(this.parentNode).hide();
+    $("#flexibilityPanel").show();
+  });
+  $("#nextFlex").click(function() {
+    $(this.parentNode).hide();
+    $("#gutPanel").show();
+  });
+
+
   $("#inputForm form").submit(function(event) {
+      $(this.parentNode).hide();
+      $("#output").show();
+
       console.log("submit run");
+    name = $("#name").val();
+      console.log("NAME****" + name);
     platformType = $("input:radio[name=platformType]:checked").val();
       console.log(platformType);
     operatingSystem = $("#operatingSystem").val();
@@ -110,7 +142,8 @@ $(document).ready(function() {
 
     console.log("test variables set");
     console.log(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility));
-
+    console.log("NAME 2"+ name);
+    $("#nameOutput").text(name);
     $("#recommendation").text(recommendation(platformType, operatingSystem, mathFocus, workEnv, flexibility)); //text recommendation to output div
 
     // recommendation2(gut);
